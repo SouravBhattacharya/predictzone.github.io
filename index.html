@@ -64,13 +64,19 @@
                             // DATA FROM JSON OBJECT
                             if(new Date(value.m_date).getDate() == today.getDate() && new Date(value.m_date).getMonth() == today.getMonth() && new Date(value.m_date).getTime() > today.getTime())
                             {
+                                // team += '<tr>';
+
+                                // team += '<td> <input type = "radio" id = "'+value.m_id+value.t1+'">' +value.t1+ '</input> </td>'
+                                // team += '<td> <input type = "radio" id = "'+value.m_id+value.t2+'">' +value.t2+ '</input> </td>'
+                               
+                                // team += '</tr>';
+
                                 team += '<tr>';
 
-                                team += '<td> <input type = "radio" id = "'+value.m_id+value.t1+'">' +value.t1+ '</input> </td>'
-                                team += '<td> <input type = "radio" id = "'+value.m_id+value.t2+'">' +value.t2+ '</input> </td>'
-                               
-                                team += '</tr>';
-                            
+                                team += '<td>' + value.t1 + '</td>';
+                                team += '<td>' + value.t2 + '</td>';
+
+                                team += '<tr>';
                                 //INSERTING ROWS INTO TABLE
                                 $('#table').append(team);
                             }
