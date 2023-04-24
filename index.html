@@ -69,10 +69,10 @@
                             // DATA FROM JSON OBJECT
                             if(new Date(value.m_date).getDate() == today.getDate() && new Date(value.m_date).getMonth() == today.getMonth() && new Date(value.m_date).getTime() > today.getTime())
                             {
-                                team += '<tr>';
+                                <div>
 
-                                team += '<td input type = "checkbox" id="'+ value.m_id + value.t1 + '">' + value.t1 + '</td>';
-                                team += '<td input type = "checkbox" id="'+ value.m_id + value.t2 + '">' + value.t2 + '</td>';
+                                <span> <input type = "checkbox" id="'+ value.m_id + value.t1 + '"> value.t1 </span>
+                                <span> <input type = "checkbox" id="'+ value.m_id + value.t2 + '"> value.t2 </span>
                             }
 
                             //INSERTING ROWS INTO TABLE
