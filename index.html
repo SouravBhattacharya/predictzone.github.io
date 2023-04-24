@@ -44,10 +44,10 @@
 
 <body>
     <section>
-        <h1>GeeksForGeeks</h1>
+        <h1>Winner Winner Chicken Dinner</h1>
 
         <!-- TABLE CONSTRUCTION-->
-        <table id='table'>
+        <div id='table'>
             <!-- HEADING FORMATION -->
             <tr>
                 <th>team1</th>
@@ -60,26 +60,28 @@
                     // FETCHING DATA FROM JSON FILE
                     $.getJSON("fixtures.json",
                             function (data) {
-                        var student = '';
-
+                        var team = '';
+                        var today = new Date()
                         // ITERATING THROUGH OBJECTS
                         $.each(data, function (key, value) {
 
                             //CONSTRUCTION OF ROWS HAVING
                             // DATA FROM JSON OBJECT
-                            student += '<tr>';
-                            student += '<td>' +
+                            if(value.stats_at.getDate() == today.getDate() && value.stats_at.getTime() < today.getTime())
+                            team += '<tr>';
+                            team += '<td>' +
                                 value.t1 + '</td>';
 
-                            student += '<td>' +
+                            team += '<td>' +
                                 value.t2 + '</td>';
                         });
 
                         //INSERTING ROWS INTO TABLE
-                        $('#table').append(student);
+                        $('#table').append(team);
                     });
                 });
             </script>
+        </table>    
     </section>
 </body>
 
