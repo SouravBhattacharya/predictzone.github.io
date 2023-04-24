@@ -47,7 +47,7 @@
         <h1>Winner Winner Chicken Dinner</h1>
 
         <!-- TABLE CONSTRUCTION-->
-        <div class='wrapper'>            
+        <table>            
 
             <script>
                 $(document).ready(function () {
@@ -71,8 +71,8 @@
 
                                 team += '<tr>';
 
-                                team += '<td input >' + value.t1 + '</td>';
-                                team += '<td>' + value.t2 + '</td>';
+                                team += '<td> <input type = "checkbox" id = "'+value.m_id+value.t1+'">' +value.t1+ '</input> </td>'
+                                team += '<td> <input type = "checkbox" id = "'+value.m_id+value.t2+'">' +value.t2+ '</input> </td>'
                                
                                 team += '</tr>';
                             
