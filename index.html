@@ -64,11 +64,6 @@
                             // DATA FROM JSON OBJECT
                             if(new Date(value.m_date).getDate() == today.getDate() && new Date(value.m_date).getMonth() == today.getMonth() && new Date(value.m_date).getTime() > today.getTime())
                             {
-                                <div class = "poll-area">
-                                    <input type = "checkbox" id = "'value.t1'"> value.t1 </input>
-                                    <input type = "checkbox" id = "'value.t2'"> value.t1 </input>
-                                </div>
-
                                 team += '<tr>';
 
                                 team += '<td> <input type = "checkbox" id = "'+value.m_id+value.t1+'">' +value.t1+ '</input> </td>'
