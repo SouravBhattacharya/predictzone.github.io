@@ -61,20 +61,19 @@
                     $.getJSON("fixtures.json",
                             function (data) {
                         var team = '';
-                        var today = new Date()
+                        var today = new Date();
                         // ITERATING THROUGH OBJECTS
                         $.each(data, function (key, value) {
 
                             //CONSTRUCTION OF ROWS HAVING
                             // DATA FROM JSON OBJECT
-                            if(value.starts_at.getDate() == today.getDate() && value.starts_at.getTime() < today.getTime())
-                            if(1==1)
-                            team += '<tr>';
-                            team += '<td>' +
-                                value.starts_at + '</td>';
-
-                            team += '<td>' +
-                                value.starts_at + '</td>';
+                            if(new Date(value.m_date).getDate() == today.getDate() && new Date(value.m_date).getMonth() == today.getMonth() && new Date(value.m_date).getTime() > today.getTime())
+                            {
+                                team += '<tr>';
+                                    
+                                team += '<td>' + value.starts_at + '</td>';
+                                team += '<td>' + value.starts_at + '</td>';
+                            }
                         });
 
                         //INSERTING ROWS INTO TABLE
