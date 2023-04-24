@@ -70,14 +70,14 @@
                             if(new Date(value.m_date).getDate() == today.getDate() && new Date(value.m_date).getMonth() == today.getMonth() && new Date(value.m_date).getTime() > today.getTime())
                             {
                                 team += '<tr>';
-                                    
+
                                 team += '<td>' + value.starts_at + '</td>';
                                 team += '<td>' + value.starts_at + '</td>';
                             }
-                        });
 
-                        //INSERTING ROWS INTO TABLE
-                        $('#table').append(team);
+                            //INSERTING ROWS INTO TABLE
+                            $('#table').append(team);
+                        });                        
                     });
                 });
             </script>
