@@ -47,12 +47,7 @@
         <h1>Winner Winner Chicken Dinner</h1>
 
         <!-- TABLE CONSTRUCTION-->
-        <div id='table'>
-            <!-- HEADING FORMATION -->
-            <tr>
-                <th>team1</th>
-                <th>team2</th>
-            </tr>
+        <div class='wrapper'>            
 
             <script>
                 $(document).ready(function () {
@@ -69,9 +64,14 @@
                             // DATA FROM JSON OBJECT
                             if(new Date(value.m_date).getDate() == today.getDate() && new Date(value.m_date).getMonth() == today.getMonth() && new Date(value.m_date).getTime() > today.getTime())
                             {
+                                <div class = "poll-area">
+                                    <input type = "checkbox" id = "'value.t1'"> value.t1 </input>
+                                    <input type = "checkbox" id = "'value.t2'"> value.t1 </input>
+                                </div>
+
                                 team += '<tr>';
 
-                                team += '<td>' + value.t1 + '</td>';
+                                team += '<td input >' + value.t1 + '</td>';
                                 team += '<td>' + value.t2 + '</td>';
                                
                                 team += '</tr>';
