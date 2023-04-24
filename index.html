@@ -75,10 +75,10 @@
                                 team += '<td>' + value.t2 + '</td>';
                                
                                 team += '</tr>';
+                            
+                                //INSERTING ROWS INTO TABLE
+                                $('#table').append(team);
                             }
-
-                            //INSERTING ROWS INTO TABLE
-                            $('#table').append(team);
                         });                        
                     });
                 });
