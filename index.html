@@ -67,14 +67,14 @@
 
                             //CONSTRUCTION OF ROWS HAVING
                             // DATA FROM JSON OBJECT
-                            //if(value.stats_at.getDate() == today.getDate() && value.stats_at.getTime() < today.getTime())
+                            if(value.starts_at.getDate() == today.getDate() && value.starts_at.getTime() < today.getTime())
                             if(1==1)
                             team += '<tr>';
                             team += '<td>' +
-                                value.stats_at + '</td>';
+                                value.starts_at + '</td>';
 
                             team += '<td>' +
-                                value.stats_at + '</td>';
+                                value.starts_at + '</td>';
                         });
 
                         //INSERTING ROWS INTO TABLE
